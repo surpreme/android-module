@@ -1,0 +1,5 @@
+rootProject.name='mvvm'
+include ':app'
+include ':baselibrary'
+include ':acountlibrary'
+include ':newlibrary'

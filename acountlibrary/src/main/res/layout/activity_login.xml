@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/splash_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Soul"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/splash_signature_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-- 跟随灵魂找到你 --"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_title_tv" />
+
+    <ImageView
+        android:id="@+id/phone_icon_iv"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_login_phone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_signature_tv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:text="手机号码"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/phone_icon_iv"
+        app:layout_constraintLeft_toRightOf="@id/phone_icon_iv"
+        app:layout_constraintTop_toTopOf="@id/phone_icon_iv" />
+
+    <TextView
+        android:id="@+id/phone_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="+86"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_icon_iv" />
+
+    <ImageView
+        android:id="@+id/phone_down_icon_iv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:rotation="180"
+        android:src="@drawable/down"
+        app:layout_constraintBottom_toBottomOf="@id/phone_code_tv"
+        app:layout_constraintLeft_toRightOf="@id/phone_code_tv"
+        app:layout_constraintTop_toTopOf="@id/phone_code_tv" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@id/phone_down_icon_iv"
+        app:layout_constraintLeft_toRightOf="@id/phone_down_icon_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/phone_down_icon_iv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grayDark"
+            android:textSize="13sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:alpha="0.7"
+        android:background="@color/grayDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_code_tv" />
+
+    <TextView
+        android:id="@+id/submit_tv"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/login_sure_background_green"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_view" />
+
+    <CheckBox
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#18D9CB"
+        android:buttonTint="#18D9CB"
+        android:text="我已阅读并同意Soul用户协议和隐私政策"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
